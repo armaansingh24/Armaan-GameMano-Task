@@ -29,7 +29,7 @@ const SidebarItem = ({ text, src, isHovered }: SidebarItemProps) => (
 
 const sidebarItems = [
   { text: "Home", src: "/home.svg" },
-  { text: "Mesages", src: "/message.png" },
+  { text: "Mesages", src: "/message.svg" },
   { text: "Shop", src: "/shop-home.svg" },
   { text: "Payment", src: "/payment.png" },
   { text: "Menu", src: "/menu.png" },
