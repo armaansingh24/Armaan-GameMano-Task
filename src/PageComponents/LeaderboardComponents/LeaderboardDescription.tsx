@@ -18,8 +18,10 @@ const LeaderboardDescription = () => {
 
       <div className=" flex flex-col items-start gap-2  ">
         <div className="tracking-[10px] font-bold text-[#FFE3C1]">
-          <h3 className="md:text-[26px] text-[20px] font-aoboshiOne ">CHOOSE YOUR</h3>
-          <h2 className="md:text-[70px] font-aoboshiOne md:leading-[70px] text-[40px] sm:leading-[56px] leading-[40px] ">CHAMPION</h2>
+          <h3 className="md:text-[26px] text-[20px] ">CHOOSE YOUR</h3>
+          <h2 className="md:text-[70px] md:leading-[70px] text-[40px] sm:leading-[56px] leading-[40px] ">
+            CHAMPION
+          </h2>
         </div>
 
         <p className="mt-2 text-sm ">

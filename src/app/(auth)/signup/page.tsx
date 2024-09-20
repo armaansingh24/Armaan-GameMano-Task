@@ -1,9 +1,8 @@
 "use client";
-
 import { useDispatch, useSelector } from "react-redux";
 import { useState, FormEvent } from "react";
-import { signUp } from "@/Redux/slices/authSlice"; // Adjust the import path if necessary
-import { RootState, AppDispatch } from "@/Redux/store"; // Adjust the import path if necessary
+import { signUp } from "@/Redux/slices/authSlice";
+import { RootState, AppDispatch } from "@/Redux/store";
 import { Toaster, toast } from "react-hot-toast";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -87,7 +86,7 @@ const SignUpPage: React.FC = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-primary transition duration-200"
+            className="w-full text-white py-2 px-4 rounded-md hover:bg-primary transition duration-200"
           >
             Sign Up
           </button>

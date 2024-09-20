@@ -1,7 +1,6 @@
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // Use next/navigation for app router
+import { usePathname } from "next/navigation";
 
-// Define a type for the navigation items
 interface NavItem {
   href: string;
   label: string;
@@ -15,13 +14,13 @@ const navItems: NavItem[] = [
 ];
 
 const TopbarList = () => {
-  const pathname = usePathname(); // Get pathname using usePathname from next/navigation
+  const pathname = usePathname();
 
   return (
     <ul className="flex gap-4 p-6 text-white text-base md:px-8 px-14 whitespace-nowrap">
       {pathname !== "/" && (
         <div
-          className={`transition-all duration-500 ease-in-out font-pressStart2 text-2xl text-[#DAB785] opacity-100 md:text-4xl`}
+          className={`transition-all duration-500 ease-in-out  text-2xl text-[#DAB785] opacity-100 md:text-4xl`}
         >
           GQ
         </div>

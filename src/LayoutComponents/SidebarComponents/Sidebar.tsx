@@ -48,7 +48,7 @@ const Sidebar = () => {
       }`}
     >
       <div
-        className={`absolute left-6 transition-all duration-500 ease-in-out font-pressStart2 text-[#DAB785] ${
+        className={`absolute left-6 transition-all duration-500 ease-in-out  text-[#DAB785] ${
           isHovered
             ? "translate-x-0 opacity-100 text-2xl"
             : "opacity-100 text-3xl md:text-4xl"

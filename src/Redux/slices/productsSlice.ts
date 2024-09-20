@@ -76,7 +76,6 @@ export const fetchProducts = createAsyncThunk(
   }
 );
 
-
 export const fetchProductById = createAsyncThunk(
   "products/fetchProductById",
   async (id: number) => {
@@ -98,15 +97,9 @@ export const fetchCategories = createAsyncThunk(
 export const fetchProductsByCategory = createAsyncThunk(
   "products/fetchProductsByCategory",
   async (categories: string[]) => {
-    // Create an array of promises for each category
     const requests = categories.map((category) => axios.get(`${category}`));
-
-    // Wait for all promises to resolve
     const responses = await Promise.all(requests);
-
-    // Combine all products from each category into a single array
     const allProducts = responses.flatMap((response) => response.data.products);
-
     return { products: allProducts };
   }
 );
@@ -117,7 +110,7 @@ const productsSlice = createSlice({
   reducers: {
     emptyProduct: (state) => {
       state.products = [];
-      state.total = 0; // Reset total if needed
+      state.total = 0;
     },
   },
   extraReducers: (builder) => {
@@ -128,7 +121,6 @@ const productsSlice = createSlice({
       })
       .addCase(fetchProducts.fulfilled, (state, action) => {
         state.isLoading = false;
-        // Filter out duplicates based on product ID
         const newProducts = action.payload.products.filter(
           (product: Product) => !state.products.some((p) => p.id === product.id)
         );

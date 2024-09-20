@@ -3,10 +3,10 @@ const ArenaSelection = () => {
     <div className="relative h-screen w-full bg-[#2a221a] flex items-center justify-center ">
       <div className="w-3/4  h-4/5 bg-[#1d1711] lg:flex-row flex-col  rounded-lg flex justify-center items-center gap-10 lg:justify-between p-12">
         <div className="flex flex-col justify-center">
-          <h2 className="lg:text-[26px] md:text-[20px] text-base font-aoboshiOne text-[#d4af7a]  font-bold tracking-wide mb-4">
+          <h2 className="lg:text-[26px] md:text-[20px] text-base text-[#d4af7a]  font-bold tracking-wide mb-4">
             CHOOSE FROM MULTIPLE
           </h2>
-          <h1 className="md:text-[70px]  md:leading-[70px] text-[40px] font-aoboshiOne text-[#e8c48f] font-bold tracking-widest mb-8">
+          <h1 className="md:text-[70px]  md:leading-[70px] text-[40px] text-[#e8c48f] font-bold tracking-widest mb-8">
             ARENAS
           </h1>
           <p className="text-white opacity-80  max-w-lg text-sm">
