@@ -161,6 +161,7 @@ const ProductList: React.FC<ProductListProps> = ({
             href={`/product-store/${product.id}`}
             prefetch={true}
             key={product.id}
+            className="my-10"
           >
             <ProductCard
               product={{

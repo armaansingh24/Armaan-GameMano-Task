@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { usePathname } from "next/navigation"; // Use next/navigation for app router
 
 // Define a type for the navigation items
 interface NavItem {
@@ -10,12 +11,21 @@ interface NavItem {
 const navItems: NavItem[] = [
   { href: "/", label: "Home", border: true },
   { href: "/product-store", label: "Product Store", border: true },
-  { href: "/leaderboard", label: "Leaderboard" },
+  { href: "/leaderboard", label: "Leaderboard", border: false },
 ];
 
 const TopbarList = () => {
+  const pathname = usePathname(); // Get pathname using usePathname from next/navigation
+
   return (
     <ul className="flex gap-4 p-6 text-white text-base md:px-8 px-14 whitespace-nowrap">
+      {pathname !== "/" && (
+        <div
+          className={`transition-all duration-500 ease-in-out font-pressStart2 text-2xl text-[#DAB785] opacity-100 md:text-4xl`}
+        >
+          GQ
+        </div>
+      )}
       {navItems.map(({ href, label, border }, index) => (
         <Link key={index} href={href}>
           <li

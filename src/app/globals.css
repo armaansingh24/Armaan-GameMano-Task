@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --pageBackground: #0000004D;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 * {
   margin: 0;
@@ -28,8 +16,8 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: #ededed;
+  background: #0a0a0a;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -37,17 +25,6 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
-
-/* Add this to your global CSS or Tailwind's custom styles if needed */
-.slick-slide {
-  @apply flex justify-center;
-  /* Center slide items */
-}
-
-.slick-track {
-  @apply flex;
-  /* Ensure track is flex */
 }
 
 .scrollbar-hide::-webkit-scrollbar {
