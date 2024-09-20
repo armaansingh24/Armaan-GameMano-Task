@@ -14,14 +14,17 @@ const Footer = () => {
             "Company Information",
             "Cookie Preferences",
           ].map((item) => (
-            <li key={item} className="hover:text-orange-300">
+            <li
+              key={item}
+              className="hover:text-orange-300 transition-colors duration-300"
+            >
               {item}
             </li>
           ))}
         </ul>
         <div className="w-full h-1 border-b border-b-[#5B5A57]" />
         <div className="flex flex-col items-center justify-center gap-4">
-          <p className="font-thin font-poppins text-gray-400">
+          <p className="font-thin text-gray-400">
             Copyright &copy; GameQust, inc. All rights reserved
           </p>
           <Image

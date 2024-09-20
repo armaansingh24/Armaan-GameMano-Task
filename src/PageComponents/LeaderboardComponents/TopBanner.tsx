@@ -23,7 +23,7 @@ const TopBanner = () => {
         <FadeInTransition>
           <div className="">
             <div className="flex justify-center items-center mt-12">
-              <h1 className="lg:text-[90px] sm:text-[70px] md:leading-[70px] text-[40px] sm:leading-[56px] leading-[40px]  font-wallpoet text-[#FFE3C1] text-center ">
+              <h1 className="lg:text-[90px] sm:text-[70px] md:leading-[70px] text-[40px] sm:leading-[56px] leading-[40px]   text-[#FFE3C1] text-center ">
                 LEAGUE OF LEGENDS
               </h1>
             </div>
