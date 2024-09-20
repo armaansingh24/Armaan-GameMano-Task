@@ -10,9 +10,10 @@ const TextSlideFadeTransition: React.FC<TextSlideFadeTransitionProps> = ({
 }) => {
   return (
     <motion.div
-      initial={{ x: -500, opacity: 0 }}
+      className="relative"
+      initial={{ x: -100, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
-      transition={{ ease: "easeInOut", duration: 3 }}
+      transition={{ ease: "easeInOut", duration: 1.5 }}
     >
       {children}
     </motion.div>

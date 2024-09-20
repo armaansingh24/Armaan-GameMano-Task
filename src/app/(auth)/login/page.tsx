@@ -69,7 +69,7 @@ const SignInPage = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-primary transition duration-200"
+            className="w-full text-white py-2 px-4 rounded-md hover:bg-primary transition duration-200"
           >
             Sign In
           </button>

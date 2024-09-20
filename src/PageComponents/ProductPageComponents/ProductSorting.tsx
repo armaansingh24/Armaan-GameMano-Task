@@ -44,7 +44,7 @@ const ProductSorting: React.FC<ProductSortingProps> = ({
       </div>
 
       {isOpen && (
-        <div className="absolute right-0 z-20 w-56 mt-2 origin-top-right bg-[--background] divide-y divide-gray-700 rounded-xl shadow-lg">
+        <div className="absolute right-0 z-20 w-56 mt-2 origin-top-right bg-[#362F25] divide-y divide-gray-700 rounded-xl shadow-lg">
           <div className="py-4 mx-2">
             {options.map((option) => (
               <DropdownMenu

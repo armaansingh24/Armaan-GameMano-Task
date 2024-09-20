@@ -2,7 +2,7 @@ import React from "react";
 
 const Notifications = () => {
   return (
-    <div className="absolute bg-[--background] rounded-2xl p-4 w-[350px] right-4 top-14 px-6">
+    <div className="absolute bg-black rounded-2xl p-4 w-[350px] right-4 top-14 px-6">
       <h3 className="mb-2 text-center text-lg text-white">Notifications</h3>
       <div className="flex flex-col justify-start gap-3">
         <div>
