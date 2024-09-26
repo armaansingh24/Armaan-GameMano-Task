@@ -28,8 +28,6 @@ const FilterProduct: React.FC<FilterProductProps> = ({
     handleCategoryChange(category);
   };
 
-  if (isLoading && selectedCategories.length) return <h1>Loading...</h1>;
-
   return (
     <div className="bg-[#362F25] p-6 mt-2 rounded-lg w-[300px] shadow-lg shadow-[#201f1f]">
       <div>
@@ -47,24 +45,28 @@ const FilterProduct: React.FC<FilterProductProps> = ({
       </div>
 
       {/* Categories */}
-      <div>
-        <h3 className="text-white font-medium mb-4">Categories</h3>
-        {categories.map((category) => (
-          <label
-            key={category.slug}
-            className="flex items-center mb-3 text-white"
-          >
-            <input
-              type="checkbox"
-              name={category.slug}
-              onChange={() => handleCategoryChange(category.url)}
-              checked={selectedCategories.includes(category.url)}
-              className="appearance-none h-4 w-4 border border-[#5B5A57] rounded-[4px] checked:bg-orange-500 checked:border-orange-500 focus:ring-1 focus:ring-orange-300"
-            />
-            <span className="ml-2 font-light text-sm">{category.name}</span>
-          </label>
-        ))}
-      </div>
+      {isLoading && selectedCategories.length === 0 ? (
+        <h1>Loading...</h1>
+      ) : (
+        <div>
+          <h3 className="text-white font-medium mb-4">Categories</h3>
+          {categories.map((category) => (
+            <label
+              key={category.slug}
+              className="flex items-center mb-3 text-white"
+            >
+              <input
+                type="checkbox"
+                name={category.slug}
+                onChange={() => handleCategoryChange(category.url)}
+                checked={selectedCategories.includes(category.url)}
+                className="appearance-none h-4 w-4 border border-[#5B5A57] rounded-[4px] checked:bg-orange-500 checked:border-orange-500 focus:ring-1 focus:ring-orange-300"
+              />
+              <span className="ml-2 font-light text-sm">{category.name}</span>
+            </label>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
